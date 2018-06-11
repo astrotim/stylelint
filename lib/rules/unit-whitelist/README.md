@@ -60,15 +60,18 @@ a { transform: rotate(30deg); }
 
 Ignore units in the values of declarations with the specified properties.
 
-For example, with `["px", "em"]`.
-
-Given:
+For example, given:
 
 ```js
-{
-  "rem": [ "line-height", "/^border/" ],
-  "%": [ "width" ]  
-}
+[
+  ["px", "em"],
+  {
+    ignoreProperties: { 
+      "rem": [ "line-height", "/^border/" ],
+      "%": [ "width" ]
+    }
+  }
+]
 ```
 
 The following patterns are *not* considered violations:
